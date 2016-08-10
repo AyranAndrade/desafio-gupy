@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="pt">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="author" content="Ayran">
+
+    <title>Encurtador de URLs</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="http://getbootstrap.com/examples/signin/signin.css" rel="stylesheet">
+
+  </head>
+
+  <body>
+
+  <div class="container">
+    <form action="/" method="post">
+		<div class="jumbotron">
+			<h1>Desafio Gupy</h1>
+			<p class="lead">Projeto feito com o objetivo de resolver o desafio proposto pelo pessoal da Gupy, que era desenvolver um encurtador de URLs com um backend em Python.</p>
+			<p><input type="text" name="url" class="form-control" placeholder="Insira a sua URL aqui" required autofocus/></p>
+			<p><input type="submit" class="btn btn-lg btn-success" href="#" role="button" value="Encurtar!"/></p>
+		</div>
+	</form>
+	
+	</div> <!-- container -->
+	
+	<h2 class="sub-header">Resumo</h2>
+	<div class="table-responsive">
+	<table class="table table-striped">
+		<thead>
+			<tr>
+				<th>Endereço</th>
+				<th>Quantidade de acessos</th>
+			</tr>
+		</thead>
+		<tbody>
+			{% for item in items %}
+				<tr>
+					<td>{{ item[0] }}</td>
+					<td>{{ item[1] }}</td>
+				</tr>
+			{% end %}
+		</tbody>
+    </table>	
+	</div>
+
+	</body>
+</html>
